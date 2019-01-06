@@ -12,4 +12,15 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+@import "bootstrap";
+
+//post-index
+.date-fact {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
