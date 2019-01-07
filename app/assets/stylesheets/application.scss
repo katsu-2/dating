@@ -17,6 +17,27 @@
 @import "bootstrap";
 
 //post-index
+.card {
+  // margin-left: 2px;
+  // margin-right: 3px;
+  margin-bottom: 70px;
+  .card-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0;
+    .card-text {
+      color: #adb5bd;
+    }
+    .icon .fa-calendar {
+      color: #dee2e6;
+    }
+    .post-time {
+      color: #dee2e6;
+    }
+  }
+}
+
 .date-fact {
   padding-left: 0;
 }

@@ -7,16 +7,21 @@
     <div class="card card-border col-sm-6 col-md-6 col-lg-3">
       <!-- image -->
       <div class="card-body">
-        <h5 class="card-title"><%= post.title %></h5>
-        <p class="card-text"><%= post.text %></p>
+        <div class="inner">
+        <h5 class="card-title "><%= post.title %></h5>
+        <p class="card-text">
+          <%= truncate(post.text, length: 30) %>
+        </p>
         <ul class="date-fact">
           <li>
             <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
-            <time class="post.time"><%= post.created_at.to_s(:datetime_base) %></time>
+            <time class="post-time"><%= post.created_at.to_s(:datetime_base) %></time>
           </li>
         </ul>
-        <p class="card-user">user</p>
+        <p class="card-user user-name">user</p>
+        </div>
       </div>
+
     </div>
     <% end %>
   </div>
