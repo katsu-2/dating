@@ -5,6 +5,8 @@ ruby '2.5.1'
 gem 'bootstrap', '~> 4.2', '>= 4.2.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record

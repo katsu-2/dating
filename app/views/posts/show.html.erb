@@ -1,6 +1,38 @@
 
-<h5>タイトル</h5>
-<p><%= @post.title %></p>
 
-<h5>依頼内容</h5>
-<p><%= @post.text %></p>
+
+<div class="container">
+  <div class="row img">
+    <div class="show-img">
+      <%= image_tag @post.img.url, :size => "500x350" if @post.img? %>
+    </div>
+  </div>
+    <div class="row">
+      <div class="show-inner">
+        <div class="show-title">
+          <%= @post.title %>
+        </div>
+        <div class="show-text">
+          <%= @post.text %>
+        </div>
+        <div class="show-date">
+          <ul class="date-fact">
+            <li>
+              <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
+              <time class="post-time"><%= @post.created_at.to_s(:datetime_base) %></time>
+            </li>
+          </ul>
+        </div>
+        <div class="show-user">
+          <p>user</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+<%= link_to '編集', edit_post_path %>
