@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :create]
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -6,7 +7,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    
+
   end
 
   def new
