@@ -2,9 +2,9 @@
 <%= form_with(model: [@post, @post.comments.build],
 local: true) do |f| %>
   <div class="card-body">
-    <%= f.text_area :content, placeholder: "コメントをする" %>
+    <%= f.text_area :content, placeholder: "アドバイスをする" %>
   </div>
   <div class="actions">
-    <%= f.submit "コメント" %>
+    <%= f.submit "アドバイスする", class: "btn btn-primary" %>
   </div>
 <% end %>
