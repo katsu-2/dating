@@ -1,11 +1,11 @@
 
 <% @post.comments.each do |comment| %>
-<div class="card post-com">
-  <div class="card-body com-body">
-    <p>
-      <strong><%= comment.user.name %></strong>
-      <%= comment.content %>
-    </p>
+  <div class="card post-com">
+    <div class="card-body com-body">
+      <p>
+        <strong><%= comment.user.name %>: </strong>
+        <%= comment.content %>
+      </p>
+    </div>
   </div>
-</div>
 <% end %>

@@ -2,8 +2,8 @@
 <div class="main">
   <div class="container mg">
     <div class="row">
-      <div class="card card-center col-sm-12 col-md-12 col-lg-8">
-
+      <!-- cardここから　-->
+      <div class="card card-center col-sm-12 col-md-10 col-lg-6">
         <div class="card-top">
           <ul class="header">
             <li class="header-left">
@@ -15,10 +15,8 @@
           </ul>
         </div>
         <hr />
-
         <div class="card-body">
           <img class="card-img-top" <%= image_tag @post.img.url, :size => "500x370" if @post.img? %>
-
           <hr />
           <h6>依頼内容</h6>
           <hr />
@@ -38,11 +36,25 @@
                 </li>
               </ul>
             </div>
+            <%= link_to '編集', edit_post_path%>
+            <%= link_to '削除', post_path(@post), method: :delete,
+            data: {confirm: "本当にいいですか"} %>
           </div>
         </div>
-
-        <%= link_to 'メッセージを送る', '#', class: "btn btn-primary" %>
       </div>
+      <!-- cardここまで -->
+      <div class="comment-body col-sm-12 col-lg-6">
+        <div class="comment-index">
+          <h6 class="card-header ">コメント</h6>
+          <%= render 'comments/comment' %>
+        </div>
+        <hr />
+
+        <div class="comment-form">
+          <%= render 'comments/form' %>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

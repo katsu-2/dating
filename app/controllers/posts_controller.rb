@@ -8,7 +8,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
-    # @comment = @post.comments.build(user_id: current_user.id) if current_user
     @comments = @post.comments
   end
 
@@ -36,6 +35,12 @@ class PostsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
   private
