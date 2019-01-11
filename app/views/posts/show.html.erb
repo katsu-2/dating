@@ -1,10 +1,10 @@
 <div class="main">
-<div class="container">
-  <div class="row img">
-    <div class="show-img">
-      <%= image_tag @post.img.url, :size => "500x350" if @post.img? %>
+  <div class="container">
+    <div class="row img">
+      <div class="show-img">
+        <%= image_tag @post.img.url, :size => "500x350" if @post.img? %>
+      </div>
     </div>
-  </div>
     <div class="row">
       <div class="card card-top col-12">
         <div class="card-body">
@@ -31,29 +31,12 @@
       </div>
     </div>
     <h5>コメント一覧</h5>
-    <% @post.comments.each do |comment| %>
-    <div class="card post-com">
-      <div class="card-body com-body">
-        <p>
-          <strong>コメント</strong>
-          <%= comment.content %>
-        </p>
-      </div>
-    </div>
+    <%= render 'comments/comment' %>
 
-    <% end %>
     <div class="row">
       <h5>コメントをする</h5>
-      <%= form_with(model: [@post, @post.comments.build],
-      local: true) do |f| %>
-        <div class="card-body">
-          <%= f.text_area :content, placeholder: "コメントをする" %>
-        </div>
-        <div class="actions">
-          <%= f.submit "コメント" %>
-        </div>
-      <% end %>
+      <%= render 'comments/form' %>
     </div>
-</div>
+  </div>
 </div>
 <%= link_to '編集', edit_post_path %>
