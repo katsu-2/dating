@@ -1,42 +1,48 @@
+
 <div class="main">
-  <div class="container">
-    <div class="row img">
-      <div class="show-img">
-        <%= image_tag @post.img.url, :size => "500x350" if @post.img? %>
-      </div>
-    </div>
+  <div class="container mg">
     <div class="row">
-      <div class="card card-top col-12">
-        <div class="card-body">
-          <div class="show-inner">
-            <h5 class="show-title">
+      <div class="card card-center col-sm-12 col-md-12 col-lg-8">
+
+        <div class="card-top">
+          <ul class="header">
+            <li class="header-left">
+              name
+            </li>
+            <li class="header-right">
               <%= @post.title %>
-            </h5>
-            <p class="show-text">
+            </li>
+          </ul>
+        </div>
+        <hr />
+
+        <div class="card-body">
+          <img class="card-img-top" <%= image_tag @post.img.url, :size => "500x370" if @post.img? %>
+
+          <hr />
+          <h6>依頼内容</h6>
+          <hr />
+          <div class="show-inner">
+            <div class="card-text">
               <%= @post.text %>
-            </p>
+            </div>
             <div class="show-date">
               <ul class="date-fact">
                 <li>
-                  <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
-                  <time class="post-time"><%= @post.created_at.to_s(:datetime_base) %></time>
+                  <i class="icon">
+                    <%= fa_icon 'calendar', class: "fa-calendar"%>
+                  </i>
+                  <time class="post-time">
+                    <%= @post.created_at.to_s(:datetime_base)%>
+                  </time>
                 </li>
               </ul>
             </div>
-            <div class="show-user">
-              <p>user</p>
-            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <h5>コメント一覧</h5>
-    <%= render 'comments/comment' %>
 
-    <div class="row">
-      <h5>コメントをする</h5>
-      <%= render 'comments/form' %>
+        <%= link_to 'メッセージを送る', '#', class: "btn btn-primary" %>
+      </div>
     </div>
   </div>
 </div>
-<%= link_to '編集', edit_post_path %>
