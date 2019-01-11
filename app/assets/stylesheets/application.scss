@@ -20,6 +20,9 @@ h2 {
   text-align: center;
 }
 
+.background {
+  background-color: #f7f7f7;
+}
 //login, signupform
 .new-user-form {
   width: 400px;
@@ -57,18 +60,18 @@ li {
 }
 
 //post-show
-.show-img {
-  margin:auto;
-  object-fit: cover;
-}
-
-.card-top {
-  margin-top: 70px;
-}
-
-.post-com {
-  margin-bottom: 10px;
-  .com-body {
-    padding-bottom: 0px;
-  }
-}
+// .show-img {
+//   margin:auto;
+//   object-fit: cover;
+// }
+//
+// .card-top {
+//   margin-top: 70px;
+// }
+//
+// .post-com {
+//   margin-bottom: 10px;
+//   .com-body {
+//     padding-bottom: 0px;
+//   }
+// }
