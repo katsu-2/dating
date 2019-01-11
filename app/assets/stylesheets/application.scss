@@ -27,7 +27,7 @@ h2 {
 }
 
 //post-index
-.card {
+.card-border {
   // margin-left: 2px;
   // margin-right: 3px;
   margin-bottom: 70px;
@@ -64,4 +64,11 @@ li {
 
 .card-top {
   margin-top: 70px;
+}
+
+.post-com {
+  margin-bottom: 10px;
+  .com-body {
+    padding-bottom: 0px;
+  }
 }
