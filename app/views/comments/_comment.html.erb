@@ -1,0 +1,11 @@
+
+<% @post.comments.each do |comment| %>
+<div class="card post-com">
+  <div class="card-body com-body">
+    <p>
+      <strong>コメント</strong>
+      <%= comment.content %>
+    </p>
+  </div>
+</div>
+<% end %>
