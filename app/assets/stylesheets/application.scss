@@ -23,16 +23,18 @@ h2 {
 .background {
   background-color: #f7f7f7;
 }
-//login, signupform
+
+/* login, signupform */
 .new-user-form {
   width: 400px;
   margin: 10% auto;
 }
 
-//post-index
+/* new-form */
+
+
+/* post-index */
 .card-border {
-  // margin-left: 2px;
-  // margin-right: 3px;
   margin-bottom: 70px;
   .card-body {
     padding-left: 1.25rem;
@@ -59,21 +61,10 @@ li {
   list-style: none;
 }
 
-//post-show
+/* post-show */
 .post-com {
   margin-bottom: 5px;
 }
 .com-body {
   padding-bottom: 0px;
 }
-//
-// .card-top {
-//   margin-top: 70px;
-// }
-//
-// .post-com {
-//   margin-bottom: 10px;
-//   .com-body {
-//     padding-bottom: 0px;
-//   }
-// }
