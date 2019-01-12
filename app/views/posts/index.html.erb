@@ -23,7 +23,9 @@
             <time class="post-time"><%= post.created_at.to_s(:datetime_base) %></time>
           </li>
         </ul>
-        <p class="card-user user-name">user</p>
+        <p class="card-user user-name">
+          <%= post.user.name if post.user%>
+        </p>
         </div>
       </div>
 
