@@ -16,7 +16,9 @@
         </div>
         <hr />
         <div class="card-body">
-          <img class="card-img-top" <%= image_tag @post.img.url, :size => "500x370" if @post.img? %>
+          <div class="card-img">
+            <%= image_tag @post.img.url, :class => "main-img" if @post.img? %>
+          </div>
           <hr />
           <h6>依頼内容</h6>
           <hr />
@@ -45,12 +47,13 @@
       <!-- cardここまで -->
       <div class="comment-body col-sm-12 col-lg-6">
         <div class="comment-index">
-          <h6 class="card-header ">コメント</h6>
+          <h6 class="card-header card-comment font-center">コメント</h6>
           <%= render 'comments/comment' %>
         </div>
         <hr />
 
         <div class="comment-form">
+          <p class="com-advise font-center">アドバイスを送ってみましょう</p>
           <%= render 'comments/form' %>
         </div>
       </div>

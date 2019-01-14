@@ -34,6 +34,9 @@ h2 {
 
 
 /* footer */
+footer {
+
+}
 .navbar-bottom {
   border-top: 1px solid #dee2e6;
 }
@@ -56,6 +59,11 @@ h2 {
     padding-right: 1.25rem;
     padding-top: 1.25rem;
     padding-bottom: 0;
+    .index-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
     .card-text {
       color: #adb5bd;
     }
@@ -82,4 +90,49 @@ li {
 }
 .com-body {
   padding-bottom: 0px;
+}
+.main-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.card-comment {
+  background-color: #00b5e1ad;
+}
+.comment-index hr .comment-form {
+  background-color: white;
+}
+.font-center {
+  text-align: center;
+}
+
+
+/* comment-submit */
+.btn-adv {
+  color: #fff;
+  background-color: #00b5e1;
+  border-color: #00b7e5;
+  border-radius: 0.25em;
+}
+
+/* userの情報　*/
+.user-img {
+  border: 1px solid #dee2e6;
+  background-color: white;
+  .img-head {
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+  }
+  .img-body {
+    border-bottom: 1px solid #dee2e6;
+    .prof_icon {
+      border-radius: 50%;
+    }
+  }
+}
+
+.user-info {
+  border: 1px solid #dee2e6;
+  background-color: white;
+
 }
