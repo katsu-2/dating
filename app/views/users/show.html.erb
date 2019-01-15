@@ -10,7 +10,7 @@
             </div>
             <div class="img-body">
               <% if @user.img? %>
-                <%= image_tag @user.image.url %>
+                <%= image_tag @user.img.url %>
               <% else %>
                 <%= image_tag("/assets/user-img.png", :class => "prof_icon" ,:size => "200x200",:alt => "プロフ画像") %>
               <% end %>
@@ -19,7 +19,9 @@
 
           <div class="user-info col-sm-12 col-md-10 ">
             <div class="user-name">
-              <%= @user.name %>
+              <p></p>
+              <label>居住地</label>
+              <%= @user.age %>
             </div>
             <div class="user-age">
               <p>22</p>
@@ -36,6 +38,6 @@
         </div>
       </div>
     </div>
-      
+
   </div>
 </div>

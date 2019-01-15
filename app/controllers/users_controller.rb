@@ -13,15 +13,20 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to @user
+    if current_user == @user
+
+      if @user.update(user_params)
+        redirect_to @user
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      redirect_to root_path
     end
   end
 
   private
     def user_params
-      params.require(:user).permit(:img)
+      params.require(:user).permit(:name, :age, :prefecture, :introduction, :img)
     end
 end
