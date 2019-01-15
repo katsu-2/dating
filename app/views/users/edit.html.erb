@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="user-profile">
+    <h2>ユーザー編集</h2>
+    <%= form_for(@user) do |f| %>
+    <div class="row">
+      <div class="user-img col-sm-12 col-md-10 col-lg-4">
+        <div class="img-head">
+          <h6><%= @user.name %></h6>
+        </div>
+        <div class="img-body">
+          <% if @user.img? %>
+            <%= image_tag @user.img.url %>
+          <% else %>
+            <%= image_tag("/assets/user-img.png", :class => "prof_icon" ,:size => "200x200",:alt => "プロフ画像") %>
+          <% end %>
+        </div>
+        <%= f.file_field :img %>
+
+      </div>
+      <div class="user-info col-sm-12 col-md-10 col-lg-8">
+        <div class="user-gender ">
+          <p></p>
+          <h6>
+          <label>性別</label>
+          男
+          </h6>
+        </div>
+        <div class="user-age">
+          <h6>
+          <label>年齢</label>
+          22
+         </h6>
+        </div>
+        <div class="user-prefecture">
+          <h6>
+          <label>居住地</label>
+          滋賀県
+         </h6>
+        </div>
+        <div class="user-myself">
+          <h6>
+          <label>自己紹介</label>
+          よろしくお願いします
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit 'プロフィール編集を完了' %>
+  <% end %>
+</div>
+</div>

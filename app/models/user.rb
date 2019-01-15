@@ -6,4 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts
   has_many :comments, dependent: :destroy
+  validates :age, presence: true
+  validates :prefecture, presence: true
+  
 end

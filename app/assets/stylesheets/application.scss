@@ -126,6 +126,7 @@ li {
 .user-img {
   border: 1px solid #dee2e6;
   background-color: white;
+  height: 260px;
   .img-head {
     border-bottom: 1px solid #dee2e6;
     text-align: center;
@@ -141,5 +142,9 @@ li {
 .user-info {
   border: 1px solid #dee2e6;
   background-color: white;
+}
 
+.user-posted {
+  border: 1px solid #dee2e6;
+  background-color: white;
 }
