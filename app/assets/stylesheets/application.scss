@@ -16,6 +16,10 @@
  */
 @import "bootstrap";
 
+.row {
+  margin-bottom: 60px;
+}
+
 h2 {
   text-align: center;
 }
@@ -123,16 +127,18 @@ li {
 }
 
 /* userの情報　*/
-.user-img {
-  border: 1px solid #dee2e6;
+.show-all {
   background-color: white;
+}
+.user-img {
   height: 260px;
+  margin-bottom: 20px;
   .img-head {
     border-bottom: 1px solid #dee2e6;
     text-align: center;
   }
   .img-body {
-    border-bottom: 1px solid #dee2e6;
+    padding-top: 10px;
     .prof_icon {
       border-radius: 50%;
     }
@@ -140,11 +146,11 @@ li {
 }
 
 .user-info {
-  border: 1px solid #dee2e6;
-  background-color: white;
+  border: 1px solid #cfcfcf;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
 }
 
 .user-posted {
   border: 1px solid #dee2e6;
-  background-color: white;
+  // background-color: white;
 }

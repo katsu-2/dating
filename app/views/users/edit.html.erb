@@ -18,29 +18,29 @@
 
       </div>
       <div class="user-info col-sm-12 col-md-10 col-lg-8">
-        <div class="user-gender ">
+        <div class="user-gender user-edit col-sm-12 col-lg-6">
           <p></p>
           <h6>
-          <label>性別</label>
+          <%= f.label :性別 %>
           男
           </h6>
         </div>
-        <div class="user-age">
+        <div class="user-prefecture user-edit col-sm-12 col-lg-6">
           <h6>
-          <label>年齢</label>
-          22
+          <%= f.label :居住地 %>
+          <%= f.text_field :prefecture, autofocus: true, autocomplete: "prefecture", class: "form-control"%>
          </h6>
         </div>
-        <div class="user-prefecture">
+        <div class="user-age user-edit col-sm-12 col-lg-6">
           <h6>
-          <label>居住地</label>
-          滋賀県
+          <%= f.label :年齢 %>
+          <%= f.number_field :age, autofocus: true, autocomplete: "age", class: "form-control"%>
          </h6>
         </div>
-        <div class="user-myself">
+        <div class="user-myself user-edit col-sm-12 col-lg-6">
           <h6>
-          <label>自己紹介</label>
-          よろしくお願いします
+          <%= f.label :自己紹介 %>
+          <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", rows: 4 ,class: "form-control" %>
           </h6>
         </div>
       </div>
