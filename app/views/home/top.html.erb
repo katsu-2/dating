@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="bg-img">
+    <%= image_tag('/assets/dating4.jpg', :class => "top_img", :alt => "top画像") %>
+    <p class="bg-tomorrow">明日のデート</p>
+    <p class="bg-really">本当にそれ着て</p>
+    <p class="bg-go">行くの？</p>
+    <div class="bg-login bg-user">
+      <%= link_to 'ログイン', new_user_session_path, class: "btn btn-primary log" %>
+    </div>
+    <div class="bg-sign_up bg-user">
+      <%= link_to '新規登録', new_user_registration_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+
+</div>

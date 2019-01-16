@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def contact
   end
+
+  def top
+  end
 end

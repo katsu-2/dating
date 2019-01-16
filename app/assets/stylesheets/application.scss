@@ -28,6 +28,113 @@ h2 {
   background-color: #f7f7f7;
 }
 
+/*     */
+/* top */
+/*     */
+.bg-img {
+  position: relative;
+}
+
+.bg-img p {
+  position: absolute;
+  // color: #dee2e6de;
+  color: white;
+  // font-size: 2em;
+  font-weight: bold;
+
+}
+
+.bg-login {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  .log {
+    opacity: .7;
+  }
+}
+
+.bg-sign_up {
+  position: absolute;
+  top: 70%;
+  left: 55%;
+}
+
+.top_img {
+  opacity: .8;
+}
+
+@media screen and (min-width: 641px) {
+	.top_img {
+		width: 100%;
+		height: auto;
+    margin: auto;
+	}
+
+  .bg-tomorrow {
+    top: 30%;
+    left: 50%;
+    font-size: 45px;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+
+  .bg-really {
+    top: 45%;
+    left: 50%;
+    font-size: 45px;
+    -ms-transform: translate(-55%,-50%);
+    -webkit-transform: translate(-55%,-50%);
+    transform: translate(-55%,-50%);
+  }
+
+  .bg-go {
+    top: 60%;
+    left: 50%;
+    font-size: 45px;
+    -ms-transform: translate(-60%,-50%);
+    -webkit-transform: translate(-60%,-50%);
+    transform: translate(-60%,-50%);
+  }
+}
+@media screen and (max-width: 640px) {
+	.top_img {
+		width: 500px;
+		height: auto;
+    margin: auto;
+	}
+
+  .bg-tomorrow {
+    top: 30%;
+    left: 50%;
+    font-size: 2em;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+
+  .bg-really {
+    top: 45%;
+    left: 50%;
+    font-size: 2em;
+    -ms-transform: translate(-55%,-50%);
+    -webkit-transform: translate(-55%,-50%);
+    transform: translate(-55%,-50%);
+  }
+
+  .bg-go {
+    top: 60%;
+    left: 50%;
+    font-size: 2em;
+    -ms-transform: translate(-60%,-50%);
+    -webkit-transform: translate(-60%,-50%);
+    transform: translate(-60%,-50%);
+  }
+}
+
+
+
+
 /* navbar */
 .nav-border {
   border-bottom: 1px solid #dee2e6;
@@ -139,6 +246,7 @@ li {
   }
   .img-body {
     padding-top: 10px;
+    // border-radius: 50%;
     .prof_icon {
       border-radius: 50%;
     }
