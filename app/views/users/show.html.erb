@@ -20,8 +20,8 @@
           <div class="user-info col-sm-12 col-md-10 ">
             <div class="user-name">
               <p></p>
-              <label>居住地</label>
-              <%= @user.prefecture %>
+              <label>性別</label>
+              <%= @user.gender %>
             </div>
             <div class="user-age">
               <p></p>
@@ -34,7 +34,7 @@
               <%= @user.introduction %>
             </div>
             <% if @user == current_user %>
-              <%= link_to '編集する', edit_user_path(@user) %>
+              <%= link_to '編集する', edit_user_registration_path(@user) %>
             <% end %>
           </div>
         </div>

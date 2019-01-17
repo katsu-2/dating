@@ -15,21 +15,16 @@
           <% end %>
         </div>
         <%= f.file_field :img %>
-
       </div>
       <div class="user-info col-sm-12 col-md-10 col-lg-8">
         <div class="user-gender user-edit col-sm-12 col-lg-6">
           <p></p>
           <h6>
-          <%= f.label :性別 %>
-          男
+          <%= f.label :男 %>
+          <%= f.radio_button :gender, :男%>
+          <%= f.label :女 %>
+          <%= f.radio_button :gender, :女 %>
           </h6>
-        </div>
-        <div class="user-prefecture user-edit col-sm-12 col-lg-6">
-          <h6>
-          <%= f.label :居住地 %>
-          <%= f.text_field :prefecture, autofocus: true, autocomplete: "prefecture", class: "form-control"%>
-         </h6>
         </div>
         <div class="user-age user-edit col-sm-12 col-lg-6">
           <h6>

@@ -6,7 +6,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts
   has_many :comments, dependent: :destroy
-  validates :age, presence: true
-  validates :prefecture, presence: true
-  
+
+  enum gender: { 男: 0, 女: 1 }
 end
