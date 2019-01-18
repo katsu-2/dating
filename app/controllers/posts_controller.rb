@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
-
   def index
     @posts = Post.all.order(created_at: :desc)
   end
@@ -8,17 +7,18 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find_by(id: @post.user_id)
-    @users = @post.user
     @comment = Comment.new
     @comments = @post.comments
   end
 
   def new
-    @post = Post.new
+    # @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
+    # @post = Post.new(post_params)
     if @post.save
       redirect_to post_path(@post)
     else
