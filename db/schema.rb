@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_01_17_033440) do
-=======
-ActiveRecord::Schema.define(version: 2019_01_16_063350) do
->>>>>>> 0cd6bb5189e4889ee16edb80489130bfb3a104ea
+ActiveRecord::Schema.define(version: 2019_01_17_094218) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -37,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_01_16_063350) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "img"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
