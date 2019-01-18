@@ -2,10 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*             */
+/* user  index */
+/*             */
 
 .user-index-box {
   width: 255px;
   height: 255px;
   border: 1px solid gray;
   // margin: 15px;
+}
+
+
+/*             */
+/* user  show */
+/*             */
+
+
+
+/* userの情報　*/
+
+
+.user-img {
+  height: 260px;
+  margin-bottom: 20px;
+  .img-head {
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+  }
+  .img-body {
+    padding-top: 10px;
+    // border-radius: 50%;
+    .prof_icon {
+      border-radius: 50%;
+    }
+  }
+}
+.user-info {
+  border: 1px solid #cfcfcf;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+
+}
+
+.user-posted {
+  border: 1px solid #dee2e6;
+  // background-color: white;
+}
+
+
+
+
+/*              */
+/*  user edit　*/
+/*              */
+.edit-profile-wrapper {
+  margin-top: 60px;
+  border: 1px solid black;
+  background-color: white;
 }

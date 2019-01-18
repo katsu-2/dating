@@ -25,7 +25,8 @@ h2 {
 }
 
 .background {
-  background-color: #f7f7f7;
+  // background-color: #f7f7f7;
+  background-color: white;
 }
 
 /*     */
@@ -232,42 +233,4 @@ li {
   background-color: #00b5e1;
   border-color: #00b7e5;
   border-radius: 0.25em;
-}
-
-/* userの情報　*/
-.show-all {
-  background-color: white;
-}
-.user-img {
-  height: 260px;
-  margin-bottom: 20px;
-  .img-head {
-    border-bottom: 1px solid #dee2e6;
-    text-align: center;
-  }
-  .img-body {
-    padding-top: 10px;
-    // border-radius: 50%;
-    .prof_icon {
-      border-radius: 50%;
-    }
-  }
-}
-.user-info {
-  border: 1px solid #cfcfcf;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
-}
-
-.user-posted {
-  border: 1px solid #dee2e6;
-  // background-color: white;
-}
-
-/*              */
-/*  ユーザー編集　*/
-/*              */
-.edit-profile-wrapper {
-  margin-top: 60px;
-  border: 1px solid black;
-  background-color: white;
 }
