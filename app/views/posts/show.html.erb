@@ -7,7 +7,6 @@
         <div class="card-top">
           <ul class="header">
             <li class="header-left">
-              name
             </li>
             <li class="header-right">
               <%= @post.title %>
@@ -38,9 +37,9 @@
                 </li>
               </ul>
             </div>
-            <%= link_to '編集', edit_post_path%>
-            <%= link_to '削除', post_path(@post), method: :delete,
-            data: {confirm: "本当にいいですか"} %>
+              <%= link_to '編集', edit_post_path%>
+              <%= link_to '削除', post_path(@post), method: :delete,
+              data: {confirm: "本当にいいですか"} %>
           </div>
         </div>
       </div>
