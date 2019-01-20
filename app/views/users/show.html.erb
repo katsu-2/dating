@@ -40,35 +40,36 @@
         </div>
       </div>
 
-      <div class="user-posted col-sm-12 col-md-10 col-lg-8">
-        <div class="user-posted-info">
-          <h3>全投稿</h3>
-        </div>
-        <% @posts.each do |post| %>
-        <div class="card card-border">
-          <div class="card-body">
-            <div class="card-head">
-              <%= image_tag post.img.url, :class => "index-img" if post.img? %>
-            </div>
-            <div class="inner">
-            <h5 class="card-title ">
-              <%= link_to post.title, post_path(post) %>
-            </h5>
-            <p class="card-text">
-              <%= truncate(post.text, length: 30) %>
-            </p>
-            <ul class="date-fact">
-              <li>
-                <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
-                <time class="post-time"><%= post.created_at.to_s(:datetime_base) %></time>
-              </li>
-            </ul>
+      <div class="user-posted ">
+        <div class="user-posted-square">
+          <div class="user-posted-info">
+            <h3>全投稿</h3>
+          </div>
+          <% @posts.each do |post| %>
+          <div class="square square-border">
+            <div class="square-body">
+              <div class="square-head">
+                <%= image_tag post.img.url, :class => "square-img" if post.img? %>
+              </div>
+              <div class="inner">
+              <h5 class="square-title ">
+                <%= link_to post.title, post_path(post) %>
+              </h5>
+              <p class="square-text">
+                <%= truncate(post.text, length: 30) %>
+              </p>
+              <ul class="date-fact">
+                <li>
+                  <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
+                  <time class="post-time"><%= post.created_at.to_s(:datetime_base) %></time>
+                </li>
+              </ul>
+              </div>
             </div>
           </div>
-        </div>
         <% end %>
       </div>
+      </div>
     </div>
-
   </div>
 </div>

@@ -46,7 +46,25 @@
 
 .user-posted {
   border: 1px solid #dee2e6;
-  // background-color: white;
+  width: 550px;
+  margin: 0 auto;
+  .user-posted-square {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .square {
+    border: 2px solid #cfcfcf;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 380px;
+    .square-head {
+      width: auto;
+      .square-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 
