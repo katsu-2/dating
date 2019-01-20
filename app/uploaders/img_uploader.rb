@@ -13,10 +13,12 @@ class ImgUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  # include Cloudinary::CarrierWave
 
-  # process :convert => 'png'
-  # process :tags => ['post_img']
+  include Cloudinary::CarrierWave
+
+
+  process :convert => 'png'
+  process :tags => ['post_img']
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
