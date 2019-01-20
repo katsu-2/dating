@@ -13,6 +13,10 @@ class ImgUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  # include Cloudinary::CarrierWave
+
+  # process :convert => 'png'
+  # process :tags => ['post_img']
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -34,7 +38,7 @@ class ImgUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   #横幅155pxのバージョンも作成
   version :thumb do
-    process resize_to_fit: [155, 190]
+    process resize_to_fit: [236, 200]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

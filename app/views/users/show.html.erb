@@ -10,7 +10,7 @@
             </div>
             <div class="img-body">
               <% if @user.img? %>
-                <%= image_tag @user.img.url %>
+                <%= image_tag @user.img_url(:thumb) %>
               <% else %>
                 <%= image_tag("/assets/user-img.png", :class => "prof_icon" ,:size => "200x200",:alt => "プロフ画像") %>
               <% end %>

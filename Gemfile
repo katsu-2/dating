@@ -8,7 +8,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 gem 'devise', '~> 4.5'
-
+gem 'cloudinary', '~> 1.11', '>= 1.11.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
