@@ -29,7 +29,7 @@ class ImgUploader < CarrierWave::Uploader::Base
   # end
 
   #オリジナル画像を横幅255px制限して保存。
-  process resize_to_fit: [255, 150]
+  # process resize_to_fit: [255, 150]
 
   # Create different versions of your uploaded files:
   #横幅155pxのバージョンも作成
