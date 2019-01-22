@@ -5,13 +5,38 @@
 /*             */
 /* user  index */
 /*             */
-
-.user-index-box {
-  width: 255px;
-  height: 255px;
-  border: 1px solid gray;
-  // margin: 15px;
+.box {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
 }
+.user-index-box {
+  width: 250px;
+  height: 250px;
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.index-icon {
+  width: 248px;
+  height: 95.5px;
+}
+
+.user-index-info {
+  .user-index-name {
+    margin: 10px 0;
+    .user-name {
+      font-weight: 600;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+  }
+  .user-index-gender {
+    margin-bottom: 8px;
+  }
+}
+
 
 
 /*             */

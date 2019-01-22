@@ -2,17 +2,26 @@
 
 
 <div class="container con-index">
-  <div class="row">
+  <div class="row box">
       <% @users.each do |user| %>
       <div class="user-index-box">
-        <div class="user-index-name">
-          <%= link_to user.name, user_path(id: user.id), class: "user-body" %>
+        <div class="user-index-img">
+          <% if user.img? %>
+            <%= image_tag user.img_url(:thumb), :class => "index-icon",:alt => "プロフ画像" %>
+          <% else %>
+            <%= image_tag("/assets/user-img.png", :class => "prof_icon" ,:size => "248x90",:alt => "プロフ画像") %>
+          <% end %>
         </div>
-        <div class="user-index-gender">
-          <%= user.gender %>
-        </div>
-        <div class="user-index-introduction">
-          <%= user.introduction %>
+        <div class="user-index-info">
+          <div class="user-index-name">
+            <%= link_to user.name, user_path(id: user.id), class: "user-name" %>
+          </div>
+          <div class="user-index-gender">
+            <%= user.gender %>
+          </div>
+          <div class="user-index-introduction">
+            <%= user.introduction %>
+          </div>
         </div>
       </div>
       <% end %>
