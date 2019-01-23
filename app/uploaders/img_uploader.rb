@@ -34,8 +34,9 @@ class ImgUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  #オリジナル画像を横幅255px制限して保存。
-  # process resize_to_fit: [255, 150]
+  #オリジナル画像を横幅310px制限して保存。
+  # process resize_to_limit: [250, 300]
+  process resize_to_limit: [350, 500]
 
   # Create different versions of your uploaded files:
   #横幅155pxのバージョンも作成
@@ -43,6 +44,9 @@ class ImgUploader < CarrierWave::Uploader::Base
     process resize_to_limit: [248,248]
   end
 
+  version :thumbnail do
+    process resize_to_limit: [250,300]
+  end
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_whitelist
