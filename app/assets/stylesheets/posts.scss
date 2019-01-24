@@ -8,32 +8,44 @@
 /* post-index */
 /*            */
 
-.card-border {
-  margin-bottom: 70px;
-  .card-body {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 0;
-    // .index-img {
-    //   width: 100%;
-    //   height: auto;
-    //   object-fit: cover;
-    // }
-    .card-text {
-      color: #adb5bd;
+.post-border {
+  margin-bottom: 50px;
+  .post-index-body {
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+  .post-index-head {
+    height: 200px;
+    .index-img {
+      object-fit: contain;
+      width: 100%;
+      height: 185px;
+    }
+  }
+  .post-name {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+
+    .post-index-text {
+      color: #345468;
+      margin: 20px 0 0 0;      
     }
     .icon .fa-calendar {
-      color: #dee2e6;
+      color: gray;
     }
     .post-time {
-      color: #dee2e6;
+      color: gray;
     }
   }
 }
 
 .date-fact {
   padding-left: 0;
+  margin: 5px 0;
 }
 
 li {

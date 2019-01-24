@@ -1,34 +1,35 @@
 
-<h2>依頼一覧</h2>
-<div class="container">
-  <div class="row">
-    <% @posts.each do |post| %>
-    <div class="card card-border col-sm-6 col-md-6 col-lg-4">
-      <div class="card-body">
-        <div class="card-head">
-          <%= image_tag post.img_url(:thumbnail), :cloud_name => "dbqorazem" ,:class => "index-img" if post.img? %>
-        </div>
-        <div class="inner">
-        <h5 class="card-title ">
-          <%= link_to post.title, post_path(post) %>
-        </h5>
-        <p class="card-text">
-          <%= truncate(post.text, length: 30) %>
-        </p>
-        <ul class="date-fact">
-          <li>
-            <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
-            <time class="post-time"><%= post.created_at.to_s(:datetime_base) %></time>
-          </li>
-        </ul>
-        <p class="card-user user-name">
-          <%= post.user.name %>
-        </p>
+<h2 class="top-font">アドバイスを貰おう</h2>
+  <div class="container">
+    <div class="row box">
+      <% @posts.each do |post| %>
+        <div class="post-index-box post-border col-sm-6 col-md-6 col-lg-4">
+          <%= link_to post_path(post) do %>
+          <div class="post-index-body">
+            <div class="post-index-head">
+              <%= image_tag post.img_url(:thumbnail), :cloud_name => "dbqorazem" ,:class => "index-img" if post.img? %>
+            </div>
+            <hr/>
+            <div class="inner">
+              <h3 class="post-index-title post-name">
+                <%= post.title %>
+              </h3>
+              <p class="post-index-text">
+                <%= truncate(post.text, length: 30) %>
+              </p>
+              <ul class="date-fact">
+                <li>
+                  <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
+                  <time class="post-time"><%= post.created_at.to_s(:datetime_base) %></time>
+                </li>
+              </ul>
+            <% end %>
+            <p class="post-index-user user-name">
+              <%= post.user.name %>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
   </div>
 </div>
-
-<%# <%= cl_image_path("myImage.jpg", :cloud_name => dbqorazem)%> %>
