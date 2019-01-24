@@ -20,13 +20,20 @@
 @import "home";
 @import "comments";
 .row {
-  margin-bottom: 60px;
+  margin: 40px 0 60px 0;
 }
 
 h2 {
   text-align: center;
 }
 
+.top-font {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: #35b3dc;
+  line-height: 2;
+}
 // .background {
 //   // background-color: #f7f7f7;
 //   background-color: white;
