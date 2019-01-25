@@ -93,6 +93,9 @@ li {
       }
       .show-inner {
         height: 115px;
+        .post-show-text {
+          color: #345468;
+        }
         .user-button {
           color: #35B3DC;
           border: 1px solid #35B3DC;
@@ -126,7 +129,26 @@ li {
           border: 1.5px solid #cfcfcf;
           border-radius: 10px;
           .com-font {
+            position: relative;
             margin: 5px;
+            .com-user {
+              .c-user-name {
+                text-decoration: none;
+                color: #17a2b8;
+                font-size: 1.2rem;
+              }
+              .d-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+              .garbage {
+                color: #adb5bdb3;
+              }
+            }
+            .content {
+              color: black;
+            }
           }
         }
       }

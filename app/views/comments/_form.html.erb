@@ -1,7 +1,7 @@
 <%= form_with(model: [@post, @post.comments.build],
 local: true) do |f| %>
   <div class="comment-body">
-    <%= f.text_area :content, class: "form-control com-main", rows: 4 ,placeholder: "アドバイスをする" %>
+    <%= f.text_area :content, class: "form-control com-main", rows: 4 ,placeholder: "150字以内" %>
   </div>
   <div class="actions">
     <%= f.submit "アドバイスする", class: "btn-adv" %>
