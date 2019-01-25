@@ -1,12 +1,12 @@
 <% @post.comments.each do |comment| %>
-  <div class="card post-com">
-    <div class="card-body com-body">
-      <p>
+  <div class="post-com">
+    <div class="com-body">
+      <p class="com-font">
         <strong><%= comment.user.name %>: </strong>
         <%= comment.content %>
       <% if user_signed_in? && comment.user_id == current_user.id %>
         <%= link_to '削除', [comment.post, comment], method: :delete,
-        class: "btn btn-danger btn-right" ,data: { confirm: "削除してもいいですか？" } %>
+        class: "btn btn-danger d-button" ,data: { confirm: "削除してもいいですか？" } %>
       <% end %>
       </p>
     </div>
