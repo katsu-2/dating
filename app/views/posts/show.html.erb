@@ -1,33 +1,31 @@
-
 <div class="main">
   <div class="container mg">
     <div class="row">
-      <!-- cardここから　-->
-      <div class="card card-center col-sm-12 col-md-10 col-lg-6">
-        <div class="card-top">
-          <ul class="header">
-            <li class="header-left">
-              <h5>
-              <%= @post.user.name %>
-              </h5>
-            </li>
-            <li class="header-right">
-              <h4>
-              <%= @post.title %>
-              </h4>
-            </li>
-          </ul>
+      <div class="post-show-box col-sm-12 col-md-12 col-lg-6">
+        <div class="post-show-top">
+          <div class="post-show-header">
+            <div class="header-user">
+              <h3 class="post-user">
+                <%= link_to @post.user.name, user_path(id: @user.id), :class => "post-show-user"%>
+              </h3>
+            </div>
+            <div class="header-title">
+              <h3 class="post-show-title">
+                <%= @post.title %>
+              </h3>
+            </div>
+          </div>
         </div>
-        <hr />
-        <div class="card-body">
-          <!-- <div class="card-img"> -->
+        <hr/>
+        <div class="post-show-body">
+          <div class="post-show-img">
             <%= image_tag @post.img.url, :class => "main-img" if @post.img? %>
-          <!-- </div> -->
-          <hr />
-          <h6>依頼内容</h6>
-          <hr />
+          </div>
+          <hr/>
+          <h6 class="center">依頼内容</h6>
+          <hr/>
           <div class="show-inner">
-            <div class="card-text">
+            <div class="post-show-text">
               <%= @post.text %>
             </div>
             <div class="show-date">
@@ -43,25 +41,24 @@
               </ul>
             </div>
             <div class="sign_in">
-            <% if user_signed_in? && @post.user_id == current_user.id %>
-              <%= link_to '編集', edit_post_path%>
-              <%= link_to '削除', post_path(@post), method: :delete,
-              data: {confirm: "本当にいいですか"} %>
-            <% end %>
+              <% if user_signed_in? && @post.user_id == current_user.id %>
+                <%= link_to '編集', edit_post_path , class: "user-button edit-button"%>
+                <%= link_to '削除', post_path(@post), class: "user-button delete-button", method: :delete, data: {confirm: "本当にいいですか"} %>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
-      <!-- cardここまで -->
+
       <div class="comment-body col-sm-12 col-lg-6">
         <div class="comment-index">
-          <h6 class="card-header card-comment font-center">コメント</h6>
+          <h6 class="comment-header">コメント</h6>
           <%= render 'comments/comment' %>
         </div>
-        <hr />
+        <hr/>
 
         <div class="comment-form">
-          <p class="com-advise font-center">アドバイスを送ってみましょう</p>
+          <p class="com-advise">アドバイスを送ってみましょう</p>
           <%= render 'comments/form' %>
         </div>
       </div>

@@ -29,16 +29,18 @@
     font-size: 1.3rem;
   }
 
-
     .post-index-text {
       color: #345468;
-      margin: 20px 0 0 0;      
+      margin: 20px 0 0 0;
     }
     .icon .fa-calendar {
       color: gray;
     }
     .post-time {
       color: gray;
+    }
+    .user-name {
+      color: #17a2b8;
     }
   }
 }
@@ -60,25 +62,103 @@ li {
 
 .main {
   margin: 70px 0 100px 0;
+  .post-show-box {
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+    height: 780px;
+    .post-user {
+      text-align: center;
+
+      .post-show-user {
+        text-decoration: none;
+        color: #17a2b8;
+      }
+    }
+    .header-title {
+      .post-show-title {
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+    }
+    .post-show-body {
+      .main-img {
+        object-fit: contain;
+        width: 100%;
+        height: 465px;
+      }
+      .center {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+      .show-inner {
+        height: 115px;
+        .user-button {
+          color: #35B3DC;
+          border: 1px solid #35B3DC;
+          border-radius: 15px;
+          padding: 4px 8px;
+          text-decoration: none;
+        }
+        .user-button:hover {
+          background-color: #35B3DC;
+          color: white;
+        }
+        .delete-button {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  .comment-body {
+    margin-top: 10px;
+    .comment-index {
+      .comment-header {
+        color: white;
+        font-size: 1.5rem;
+        background-color: #00b5e1ad;
+        text-align: center;
+      }
+      .post-com {
+        margin-bottom: 5px;
+        .com-body {
+          padding-bottom: 0px;
+          border: 1.5px solid #cfcfcf;
+          border-radius: 10px;
+          .com-font {
+            margin: 5px;
+          }
+        }
+      }
+    }
+    .comment-form {
+      .com-advise {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        line-height: 3;
+      }
+      .comment-body {
+        .com-main {
+          margin-bottom: 20px;
+        }
+      }
+      .actions {
+        text-align: right;
+
+        .btn-adv {
+          color: #fff;
+          background-color: #00b5e1;
+          border-color: #00b7e5;
+          border-radius: 0.25em;
+          line-height: 2;
+        }
+      }
+    }
+  }
 }
 
-.post-com {
-  margin-bottom: 5px;
-}
-.com-body {
-  padding-bottom: 0px;
-}
-// .main-img {
-//   width: 100%;
-//   height: auto;
-//   object-fit: cover;
-// }
-.card-comment {
-  background-color: #00b5e1ad;
-}
+
 .comment-index hr .comment-form {
   background-color: white;
-}
-.font-center {
-  text-align: center;
 }
