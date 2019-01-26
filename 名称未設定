@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="user-profile">
+    <h2>ユーザー詳細ページ</h2>
+    <div class="row show-all">
+      <div class="user-show col-lg-4">
+        <div class="row">
+          <div class="user-img col-sm-12 col-md-12">
+            <div class="img-head">
+              <h5><%= @user.name %></h5>
+            </div>
+            <div class="img-body">
+              <% if @user.img? %>
+                <%= image_tag @user.img_url(:thumb), :class => "user-show-img" %>
+              <% else %>
+                <%= image_tag("/assets/user-img.png", :class => "prof_icon" ,:size => "200x200",:alt => "プロフ画像") %>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="user-info col-sm-12 col-md-12 ">
+            <div class="user-name">
+              <p></p>
+              <label>性別</label>
+              <%= @user.gender %>
+            </div>
+            <div class="user-age">
+              <p></p>
+              <label>年齢</label>
+              <%= @user.age %>
+            </div>
+            <div class="user-myself">
+              <p></p>
+              <label>自己紹介</label>
+              <%= @user.introduction %>
+            </div>
+            <% if @user == current_user %>
+              <%= link_to '編集する', edit_user_registration_path(@user) %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-posted ">
+        <div class="user-posted-square">
+          <div class="user-posted-info">
+            <h3>全投稿</h3>
+          </div>
+          <% @posts.each do |post| %>
+          <div class="square square-border">
+            <div class="square-body">
+              <div class="square-head">
+                <%= image_tag post.img.url, :class => "square-img" if post.img? %>
+              </div>
+              <div class="inner">
+              <h5 class="square-title ">
+                <%= link_to post.title, post_path(post) %>
+              </h5>
+              <p class="square-text">
+                <%= truncate(post.text, length: 30) %>
+              </p>
+              <ul class="date-fact">
+                <li>
+                  <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
+                  <time class="post-time"><%= post.created_at.to_s(:datetime_base) %></time>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
