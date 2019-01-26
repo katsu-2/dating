@@ -62,54 +62,170 @@
 /* user  show */
 /*             */
 
+.box {
+  // ユーザーイメージ
+  .user-image {
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+    .name-head {
+      border-bottom: 2px solid #cfcfcf;
 
+      .user-name {
+        text-align: center;
+      }
+    }
 
-/* userの情報　*/
+    .user-prof-img {
 
+      .img-body {
+        margin: 20px 0 20px 0;
+        .user-show-img {
+          object-fit: contain;
+          width: 100%;
+          height: 165px;
 
-.user-img {
-  height: 260px;
-  margin-bottom: 20px;
-  .img-head {
-    border-bottom: 1px solid #dee2e6;
-    text-align: center;
-  }
-  .img-body {
-    padding-top: 10px;
-    // border-radius: 50%;
-    .prof_icon {
-      border-radius: 50%;
+        }
+        .prof_icon {
+          object-fit: contain;
+          width: 100%;
+          height: 165px;
+        }
+      }
     }
   }
-}
-.user-info {
-  border: 1px solid #cfcfcf;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
-
-}
-
-.user-posted {
-  border: 1px solid #dee2e6;
-  width: 550px;
-  margin: 0 auto;
-  .user-posted-square {
-    width: 400px;
-    margin: 0 auto;
-  }
-  .square {
+  // ユーザー詳細
+  .user-info {
     border: 2px solid #cfcfcf;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    width: 380px;
-    .square-head {
-      width: auto;
-      .square-img {
-        width: 100%;
-        height: auto;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+
+  }
+  // 投稿一覧
+  .user-post-square {
+    // border: 2px solid #cfcfcf;
+    // border-radius: 10px;
+
+    .user-post-title {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .user-post-all {
+
+      .post-square {
+        border: 2px solid #cfcfcf;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 20px;
+        // width: 520px;
+
+        .post-img-body {
+          height: 300px;
+          border-bottom: 2px solid #cfcfcf;
+
+          .square-img {
+            object-fit: contain;
+            width: 100%;
+            height: 280px;
+          }
+        }
+
+        .post-inner {
+          padding: 20px;
+
+          .title {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 1.3rem;
+          }
+
+          .inner-text {
+            color: #345468;
+            margin-top: 20px;
+          }
+
+          .date-fact {
+            margin: 5px 0;
+
+            .icon {
+              color: gray;
+            }
+
+            .post-time {
+              color: gray;
+            }
+          }
+        }
       }
     }
   }
 }
+
+
+
+
+
+
+// .user-profile {
+//
+//   .user-show {
+//     border: 1px solid #cfcfcf;
+//     .user-img {
+//       // height: 260px;
+//       margin-bottom: 20px;
+//
+//       .img-head {
+//         border-bottom: 1px solid #dee2e6;
+//         text-align: center;
+//       }
+//
+//       .img-body {
+//         padding-top: 20px;
+//
+//         .user-show-img {
+//
+//         }
+//
+//         .prof_icon {
+//           border-radius: 50%;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+//
+//
+// .user-info {
+//   border: 1px solid #cfcfcf;
+//   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+//
+// }
+//
+// .user-posted {
+//   border: 1px solid #dee2e6;
+//   width: 550px;
+//   margin: 0 auto;
+//   .user-posted-square {
+//     width: 400px;
+//     margin: 0 auto;
+//   }
+//   .square {
+//     border: 2px solid #cfcfcf;
+//     margin: 0 auto;
+//     margin-bottom: 20px;
+//     width: 380px;
+//     .square-head {
+//       width: auto;
+//       .square-img {
+//         width: 100%;
+//         height: auto;
+//       }
+//     }
+//   }
+// }
 
 
 
