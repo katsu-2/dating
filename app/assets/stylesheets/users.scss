@@ -165,76 +165,85 @@
 
 
 
-
-
-
-// .user-profile {
-//
-//   .user-show {
-//     border: 1px solid #cfcfcf;
-//     .user-img {
-//       // height: 260px;
-//       margin-bottom: 20px;
-//
-//       .img-head {
-//         border-bottom: 1px solid #dee2e6;
-//         text-align: center;
-//       }
-//
-//       .img-body {
-//         padding-top: 20px;
-//
-//         .user-show-img {
-//
-//         }
-//
-//         .prof_icon {
-//           border-radius: 50%;
-//         }
-//       }
-//     }
-//   }
-// }
-//
-//
-//
-// .user-info {
-//   border: 1px solid #cfcfcf;
-//   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
-//
-// }
-//
-// .user-posted {
-//   border: 1px solid #dee2e6;
-//   width: 550px;
-//   margin: 0 auto;
-//   .user-posted-square {
-//     width: 400px;
-//     margin: 0 auto;
-//   }
-//   .square {
-//     border: 2px solid #cfcfcf;
-//     margin: 0 auto;
-//     margin-bottom: 20px;
-//     width: 380px;
-//     .square-head {
-//       width: auto;
-//       .square-img {
-//         width: 100%;
-//         height: auto;
-//       }
-//     }
-//   }
-// }
-
-
-
-
 /*              */
 /*  user edit　*/
 /*              */
-.edit-profile-wrapper {
-  margin-top: 60px;
-  border: 1px solid black;
-  background-color: white;
+
+// 共通部分
+.edit-each {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+
+  .edit-label {
+    width: 200px;
+
+    p {
+      text-align: right;
+      color: #2B556A;
+    }
+  }
+
+  .edit-form {
+    border: 2px solid #cfcfcf;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    margin: auto;
+  }
+
+  .edit-introduction {
+    border: 2px solid #cfcfcf;
+    border-radius: 5px;
+    width: 300px;
+    margin: auto;
+  }
+}
+
+// 共通部分
+
+
+.user-profile {
+
+  .profile-edit {
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+
+    .edit-img {
+
+      .user-img {
+        object-fit: contain;
+        width: 100%;
+        height: 165px;
+        margin-top: 15px;
+      }
+
+      .prof-icon {
+
+      }
+
+      .img-file {
+        margin-top: 15px;
+        text-align: center;
+      }
+    }
+
+    .edit-info {
+      padding: 20px;
+
+    }
+  }
+
+  .submit {
+    margin-top: 25px;
+    text-align: center;
+    
+    .update {
+      border: 1px solid #35B3DC;
+      border-radius: 20px;
+      color: white;
+      background-color: #35B3DC;
+      padding: 5px 15px;
+    }
+  }
 }

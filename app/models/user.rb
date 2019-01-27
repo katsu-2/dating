@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments, dependent: :destroy
 
-  enum gender: { 男: 0, 女: 1 }
+  enum gender: { 男性: 0, 女性: 1 }
   validates :name, presence: true, length: { maximum: 20 }
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
