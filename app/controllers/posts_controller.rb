@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
+
+
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.page(params[:page]).per(6).order('created_at DESC')
   end
 
   def show
