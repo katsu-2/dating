@@ -200,7 +200,7 @@
   }
 }
 
-// 共通部分
+// 共通部分ここまで
 
 
 .user-profile {
@@ -211,20 +211,28 @@
 
     .edit-img {
 
-      .user-img {
-        object-fit: contain;
-        width: 100%;
-        height: 165px;
-        margin-top: 15px;
+      .imagePreview {
+
+        .user-img {
+          object-fit: contain;
+          width: 100%;
+          height: 165px;
+          margin-top: 15px;
+        }
+
+        .prof-icon {
+        }
       }
 
-      .prof-icon {
-
-      }
-
-      .img-file {
-        margin-top: 15px;
+      .edit-img-file {
         text-align: center;
+        margin-top: 30px;
+
+        .edit-field {
+          width: 40%;
+
+
+        }
       }
     }
 
@@ -237,7 +245,7 @@
   .submit {
     margin-top: 25px;
     text-align: center;
-    
+
     .update {
       border: 1px solid #35B3DC;
       border-radius: 20px;
