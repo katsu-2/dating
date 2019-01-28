@@ -9,7 +9,11 @@
           <%= link_to post_path(post) do %>
           <div class="post-index-body">
             <div class="post-index-head">
+            <% if post.img? %>
               <%= image_tag post.img_url(:thumbnail), :cloud_name => "dbqorazem" ,:class => "index-img" if post.img? %>
+            <% else %>
+              <%= image_tag("/assets/user-img.png", :class => "index_post_img" ,:alt => "依頼画像") %>
+            <% end %>
             </div>
             <hr/>
             <div class="inner">
