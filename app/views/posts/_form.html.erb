@@ -13,10 +13,15 @@
       <%= f.text_area :text, class: "form-control", rows: 5 %>
     </div>
 
+    <div class="img-preview">
+      <%= image_tag @post.img.url, class: "img_prev" if @post.img? %>
+    </div>
+
     <div class="form-group">
       <%= f.label :画像 %><br />
-      <%= f.file_field :img, class: "image" %>
+      <%= f.file_field :img, class: "image", id: 'post_img' %>
     </div>
+
 
     <p>
       <%= f.check_box :remove_img %>
