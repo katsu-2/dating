@@ -8,6 +8,23 @@
 /* post-index */
 /*            */
 
+  .top-font {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    background-color: #35b3dc;
+    line-height: 2;
+
+    .top-new {
+      border: 1px solid red;
+      border-radius: 6px;
+      color: white;
+      font-size: .9rem;
+      padding: 3px;
+      background-color: red;
+    }
+  }
+
 .post-border {
   margin-bottom: 50px;
   .post-index-body {
