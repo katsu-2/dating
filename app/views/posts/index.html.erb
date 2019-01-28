@@ -1,5 +1,7 @@
-
-<h2 class="top-font">アドバイスを貰おう</h2>
+    <h2 class="top-font">
+      アドバイスを貰おう
+      <%= link_to "依頼投稿", new_post_path, class: "top-new" %>
+    </h2>
   <div class="container">
     <div class="row box">
       <% @posts.each do |post| %>
