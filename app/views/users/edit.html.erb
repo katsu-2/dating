@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="user-profile">
+    <h2>ユーザー編集</h2>
+    <%= form_for(@user) do |f| %>
+    <div class="row">
+      <div class="user-img col-sm-12 col-md-10 col-lg-4">
+        <div class="img-head">
+          <h6><%= @user.name %></h6>
+        </div>
+        <div class="img-body">
+          <% if @user.img? %>
+            <%= image_tag @user.img.url %>
+          <% else %>
+            <%= image_tag("/assets/user-img.png", :class => "prof_icon" ,:size => "200x200",:alt => "プロフ画像") %>
+          <% end %>
+        </div>
+        <%= f.file_field :img %>
+      </div>
+      <div class="user-info col-sm-12 col-md-10 col-lg-8">
+        <div class="user-gender user-edit col-sm-12 col-lg-6">
+          <p></p>
+          <h6>
+          <%= f.label :男 %>
+          <%= f.radio_button :gender, :男%>
+          <%= f.label :女 %>
+          <%= f.radio_button :gender, :女 %>
+          </h6>
+        </div>
+        <div class="user-age user-edit col-sm-12 col-lg-6">
+          <h6>
+          <%= f.label :年齢 %>
+          <%= f.number_field :age, autofocus: true, autocomplete: "age", class: "form-control"%>
+         </h6>
+        </div>
+        <div class="user-myself user-edit col-sm-12 col-lg-6">
+          <h6>
+          <%= f.label :自己紹介 %>
+          <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", rows: 4 ,class: "form-control" %>
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit 'プロフィール編集を完了' %>
+  <% end %>
+</div>
+</div>

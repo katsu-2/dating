@@ -1,0 +1,21 @@
+
+<% @post.comments.each do |comment| %>
+  <div class="post-com">
+    <div class="com-body">
+      <div class="com-font">
+        <div class="com-user">
+          <%= link_to comment.user.name, user_path(id: comment.user.id), class: "c-user-name" %>
+          <% if user_signed_in? && comment.user_id == current_user.id %>
+            <%= link_to [comment.post, comment], method: :delete,
+            class: "d-button", data: { confirm: "削除してもいいですか？" } do %>
+              <%= fa_icon 'trash', class: "garbage"%>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="content">
+        <%= comment.content %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

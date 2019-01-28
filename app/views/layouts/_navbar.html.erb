@@ -1,21 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to 'dating', posts_path, class: "navbar-brand nav-link" %>
+<nav class="navbar navbar-expand-lg navbar-light color nav-border">
+  <% if user_signed_in? %>
+    <%= link_to 'dating', posts_path, class: "nav-link brand-color" %>
+  <% else %>
+    <%= link_to 'dating', root_path, class: "nav-link brand-color" %>
+  <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav nav-right">
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item">
           <%= link_to 'ログアウト', destroy_user_session_path,
           class: "nav-link", method: :delete, data: { confirm: "本当にいいですか？"} %>
         </li>
         <li class="nav-item">
-          <%= link_to 'ユーザー', '#', class: "nav-link" %>
+          <%= link_to 'ユーザー', users_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to '新規登録',new_post_path , class: "nav-link" %>
+          <%= link_to '依頼投稿',new_post_path , class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'マイページ',user_path(current_user.id) , class: "nav-link" %>
         </li>
       <% else %>
         <li class="nav-item">

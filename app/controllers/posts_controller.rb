@@ -1,21 +1,28 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :create]
+
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.page(params[:page]).per(6).order('created_at DESC')
   end
 
   def show
     @post = Post.find(params[:id])
+    @user = User.find_by(id: @post.user_id)
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   def new
-    @post = Post.new
+    # @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
+    # @post = Post.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to post_path(@post)
     else
       render 'new'
     end
@@ -32,6 +39,12 @@ class PostsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
   private

@@ -1,40 +1,68 @@
-
-<div class="container">
-  <div class="row img">
-    <div class="show-img">
-      <%= image_tag @post.img.url, :size => "500x350" if @post.img? %>
-    </div>
-  </div>
+<div class="main">
+  <div class="container mg">
     <div class="row">
-      <div class="card card-top col-12">
-        <div class="card-body">
+      <div class="post-show-box col-sm-12 col-md-12 col-lg-6">
+        <div class="post-show-top">
+          <div class="post-show-header">
+            <div class="header-user">
+              <h3 class="post-user">
+                <%= link_to @post.user.name, user_path(id: @user.id), :class => "post-show-user"%>
+              </h3>
+            </div>
+            <div class="header-title">
+              <h3 class="post-show-title">
+                <%= @post.title %>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <div class="post-show-body">
+          <div class="post-show-img">
+            <%= image_tag @post.img.url, :class => "main-img" if @post.img? %>
+          </div>
+          <hr/>
+          <h6 class="center">依頼内容</h6>
+          <hr/>
           <div class="show-inner">
-            <h5 class="show-title">
-              <%= @post.title %>
-            </h5>
-            <p class="show-text">
+            <div class="post-show-text">
               <%= @post.text %>
-            </p>
+            </div>
             <div class="show-date">
               <ul class="date-fact">
                 <li>
-                  <i class="icon"><%= fa_icon 'calendar', class: "fa-calendar" %></i>
-                  <time class="post-time"><%= @post.created_at.to_s(:datetime_base) %></time>
+                  <i class="icon">
+                    <%= fa_icon 'calendar', class: "fa-calendar"%>
+                  </i>
+                  <time class="post-time">
+                    <%= @post.created_at.to_s(:datetime_base)%>
+                  </time>
                 </li>
               </ul>
             </div>
-            <div class="show-user">
-              <p>user</p>
+            <div class="sign_in">
+              <% if user_signed_in? && @post.user_id == current_user.id %>
+                <%= link_to '編集', edit_post_path , class: "user-button edit-button"%>
+                <%= link_to '削除', post_path(@post), class: "user-button delete-button", method: :delete, data: {confirm: "本当にいいですか"} %>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="comment-body col-sm-12 col-lg-6">
+        <div class="comment-index">
+          <h6 class="comment-header">コメント</h6>
+          <%= render 'comments/comment' %>
+        </div>
+        <hr/>
+
+        <div class="comment-form">
+          <p class="com-advise">アドバイスを送ってみましょう</p>
+          <%= render 'comments/form' %>
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>
-
-
-
-
-
-
-<%= link_to '編集', edit_post_path %>

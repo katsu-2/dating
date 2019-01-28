@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'home/about'
-  get 'home/contact'
-  root 'posts#index'
-  resources :posts
+  devise_for :users, controllers: { registrations: 'registrations'}
+  resources :users
+  root 'home#top'
+  # root 'posts#index'
+  resources :posts do
+    resources :comments
+  end
 end
