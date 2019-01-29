@@ -11,7 +11,7 @@ default: &default
   pool: 5
   timeout: 5000
   username: katsu
-  password:
+  password: 5Bs9Cd
   socket: /tmp/mysql.sock
   # host: localhost
 
@@ -22,7 +22,7 @@ development:
   database: dating_development
   pool: 5
   username: katsu
-  password:
+  password: 5Bs9Cd
   # host: localhost
 
 test:
@@ -32,7 +32,7 @@ test:
   database: dating_test
   pool: 5
   username: katsu
-  password:
+  password: 5Bs9Cd
   # host: localhost
 
 production:
