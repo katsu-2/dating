@@ -11,7 +11,7 @@ default: &default
   pool: 5
   timeout: 5000
   username: katsu
-  password: 5Bs9Cd
+  password:
   socket: /tmp/mysql.sock
   # host: localhost
 
@@ -22,7 +22,7 @@ development:
   database: dating_development
   pool: 5
   username: katsu
-  password: 5Bs9Cd
+  password:
   # host: localhost
 
 test:
@@ -32,35 +32,15 @@ test:
   database: dating_test
   pool: 5
   username: katsu
-  password: 5Bs9Cd
+  password:
   # host: localhost
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: dating_production
+  database: heroku_6212c2b1ea4a118
   pool: 5
-  username: katsu
-  password: 5Bs9Cd
-  # host: localhost
-
-#
-# default: &default
-#   adapter: sqlite3
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   timeout: 5000
-#
-# development:
-#   <<: *default
-#   database: db/development.sqlite3
-#
-# # Warning: The database defined as "test" will be erased and
-# # re-generated from your development database when you run "rake".
-# # Do not set this db to the same as development or production.
-# test:
-#   <<: *default
-#   database: db/test.sqlite3
-#
-# production:
-#   url: <%= ENV['DATABASE_URL'] %>
+  username: bb4cab4013e435
+  password: d4065c71
+  host: http://us-cdbr-iron-east-03.cleardb.net
