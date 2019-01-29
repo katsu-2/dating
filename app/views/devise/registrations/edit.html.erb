@@ -1,0 +1,67 @@
+
+<h2>プロフィール編集</h2>
+<div class="row">
+  <div class="user-profile col-sm-12 col-md-12 col-lg-12">
+    <div class="profile-edit">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="edit-img">
+        <div class="imagePreview">
+        <% if @user.img? %>
+          <%= image_tag @user.img.url(:thumb), :class => "user-img" %>
+        <% else %>
+          <%= image_tag("/assets/user-img.png", :class => "prof-icon", :size => "200x200", :alt => "プロフ画像") %>
+        <% end %>
+      </div>
+        <div class="edit-img-file">
+          <label class="btn btn-outline-secondary edit-field">
+              画像を追加する
+              <%= f.file_field :img, id: "img-file", class: "hidden", style: "display: none" %>
+          </label>
+        </div>
+      </div>
+      <div class="edit-info">
+        <div class="edit-name edit-each">
+          <div class="edit-label">
+            <p>名前</p>
+          </div>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "名前", class: "edit-form" %>
+        </div>
+        <div class="edit-email edit-each">
+          <div class="edit-label">
+            <p>メールアドレス</p>
+          </div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "edit-form" %>
+        </div>
+        <div class="edit-age edit-each">
+          <div class="edit-label">
+            <p>年齢</p>
+          </div>
+          <%= f.number_field :age, autofocus: true, autocomplete: "age", class: "edit-form"%>
+        </div>
+        <div class="edit-gender edit-each">
+          <div class="edit-label">
+            <p>性別</p>
+          </div>
+          <div class="edit-form">
+            <%= f.label :男性 %>
+            <%= f.radio_button :gender, :男性 %>
+            <%= f.label :女性 %>
+            <%= f.radio_button :gender, :女性 %>
+          </div>
+        </div>
+        <div class="edit-introduction edit-each">
+          <div class="edit-label">
+            <p>自己紹介</p>
+          </div>
+          <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", rows: 4 ,class: "edit-introduction" %>
+        </div>
+      </div>
+      <!-- edit-info ここまで-->
+    </div>
+    <div class="submit">
+        <%= f.submit "編集を完了する", class: "update" %>
+    </div>
+  </div>
+  <% end %>
+</div>

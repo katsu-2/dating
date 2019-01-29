@@ -1,0 +1,215 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/*            */
+/* post-index */
+/*            */
+
+  .top-font {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    background-color: #35b3dc;
+    line-height: 2;
+
+    .top-new {
+      border: 1px solid red;
+      border-radius: 6px;
+      color: white;
+      font-size: .9rem;
+      padding: 3px;
+      background-color: red;
+    }
+  }
+
+.post-border {
+  margin-bottom: 50px;
+  .post-index-body {
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+  .post-index-head {
+    height: 200px;
+    .index-img {
+      object-fit: contain;
+      width: 100%;
+      height: 185px;
+    }
+
+    .index_post_img {
+      object-fit: contain;
+      width: 100%;
+      height: 185px;
+    }
+  }
+  .post-name {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+    .post-index-text {
+      color: #345468;
+      margin: 20px 0 0 0;
+    }
+    .icon .fa-calendar {
+      color: gray;
+    }
+    .post-time {
+      color: gray;
+    }
+    .user-name {
+      color: #17a2b8;
+    }
+  }
+}
+
+.date-fact {
+  padding-left: 0;
+  margin: 5px 0;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/*            */
+/* post-show */
+/*            */
+
+.main {
+  margin: 70px 0 100px 0;
+  .post-show-box {
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+    height: 780px;
+    .post-user {
+      text-align: center;
+
+      .post-show-user {
+        text-decoration: none;
+        color: #17a2b8;
+      }
+    }
+    .header-title {
+      .post-show-title {
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+    }
+    .post-show-body {
+      .main-img {
+        object-fit: contain;
+        width: 100%;
+        height: 465px;
+      }
+      .center {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+      .show-inner {
+        height: 115px;
+        .post-show-text {
+          color: #345468;
+        }
+        .user-button {
+          color: #35B3DC;
+          border: 1px solid #35B3DC;
+          border-radius: 15px;
+          padding: 4px 8px;
+          text-decoration: none;
+        }
+        .user-button:hover {
+          background-color: #35B3DC;
+          color: white;
+        }
+        .delete-button {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  .comment-body {
+    margin-top: 10px;
+    .comment-index {
+      .comment-header {
+        color: white;
+        font-size: 1.5rem;
+        background-color: #00b5e1ad;
+        text-align: center;
+      }
+      .post-com {
+        margin-bottom: 5px;
+        .com-body {
+          padding-bottom: 0px;
+          border: 1.5px solid #cfcfcf;
+          border-radius: 10px;
+          .com-font {
+            position: relative;
+            margin: 5px;
+            .com-user {
+              .c-user-name {
+                text-decoration: none;
+                color: #17a2b8;
+                font-size: 1.2rem;
+              }
+              .d-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+              .garbage {
+                color: #adb5bdb3;
+              }
+            }
+            .content {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    .comment-form {
+      .com-advise {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        line-height: 3;
+      }
+      .comment-body {
+        .com-main {
+          margin-bottom: 20px;
+        }
+      }
+      .actions {
+        text-align: right;
+
+        .btn-adv {
+          color: #fff;
+          background-color: #00b5e1;
+          border-color: #00b7e5;
+          border-radius: 0.25em;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
+
+.comment-index hr .comment-form {
+  background-color: white;
+}
+
+
+
+/*            */
+/* post-new   */
+/*            */

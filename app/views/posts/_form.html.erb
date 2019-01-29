@@ -1,0 +1,38 @@
+
+<div class="container">
+  <div class="field image">
+    <%= form_for (@post) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :タイトル %><br />
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :依頼内容 %><br />
+      <%= f.text_area :text, class: "form-control", rows: 5 %>
+    </div>
+
+    <div class="img-preview">
+      <%= image_tag @post.img.url, class: "img_prev" if @post.img? %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :画像 %><br />
+      <%= f.file_field :img, class: "image", id: 'post_img' %>
+    </div>
+
+
+    <p>
+      <%= f.check_box :remove_img %>
+      画像の削除
+    </p>
+      <%= f.hidden_field :img_cache %>
+
+    <p>
+      <%= f.submit "依頼する", class: "btn btn-primary" %>
+    </p>
+
+    <% end %>
+  </div>
+</div>
