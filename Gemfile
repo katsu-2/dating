@@ -12,8 +12,7 @@ gem 'cloudinary', '~> 1.11', '>= 1.11.1'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'kaminari-bootstrap', '~> 3.0', '>= 3.0.1'
-gem 'sqlite3', groups: %w(test development), require: false
-gem 'pg', groups: %w(production), require: false
+gem 'mysql2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
@@ -47,8 +46,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # gem 'sqlite3'
-
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -71,7 +68,7 @@ group :test do
 end
 
 # group :production do
-#   gem 'pg'
+#   gem 'pg', '~> 1.1', '>= 1.1.4'
 # end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
